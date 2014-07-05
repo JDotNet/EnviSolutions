@@ -24,13 +24,11 @@ body
 
 footer
 {
-	background: #444444;				
-	bottom: -50px;
-	left: 0;
+	background: #444444;
 	margin: 6px;
-	padding: 1em;
-	position: absolute;
-	right: 0;
+	padding: 1em;	
+	float: left;
+	width: 100%;
 }
 
 header
@@ -41,7 +39,7 @@ header
 	width: 456px;
 	height: 144px;
 	text-align: center;
-	
+	vertical-align: middle;	
 }
 
 header #logo, #banner
@@ -51,7 +49,7 @@ header #logo, #banner
 
 header #logo img
 {
-	width: 70%;
+	width: 100%;
 }
 
 nav
@@ -105,15 +103,40 @@ nav ul li a
 	/*text-shadow:rgb(0, 0, 0) 0px 1px 1px;*/
 }
 
+#clientes
+{	
+	background: white;
+	margin: 6px;
+	padding: 1em;
+	float: left;
+	width: 100%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#clientes ul
+{
+	list-style: none;	
+}
+
+#clientes ul li
+{
+	display: inline-block;
+}
+#clientes ul li figure img
+{
+	width: 250px;
+}
+
 #contenedor
 {
-	width: 1404px;
-	margin: 0 auto;
-	display: block;	
-	padding: 1em 0 0 0;
 	/*border: 1px solid red;*/
+	display: block;	
+	margin: 0 auto;
 	overflow: hidden;
+	padding: 1em 0 0 0;
 	position: relative;
+	width: 1404px;
 }
 
 #contenido
@@ -126,20 +149,20 @@ nav ul li a
 {	
 	background: white;
 	float: left;
+	height: 456px;
 	margin:6px;
+	overflow: hidden;
 	position: relative;
 	width: 456px;
-	height: 456px;
-	overflow: hidden;
 }
 
 #contenido .contenido_item .imagen
 {
-	margin: 0px;
 	height: 312px;
-	width: 456px;	
+	margin: 0px;
 	overflow: hidden;
 	position: relative;
+	width: 456px;	
 }
 
 #contenido .contenido_item .imagen img
@@ -176,8 +199,8 @@ nav ul li a
 {	
 	background: #898989;
 	color: white;
-	text-shadow: rgb(0,0,0) 0 1px 1px;
 	text-decoration: none;
+	text-shadow: rgb(0,0,0) 0 1px 1px;
 }
 
 #contenido .contenido_item:hover .texto .subtitulo
@@ -192,28 +215,33 @@ nav ul li a
 	color: #80C408;	
 }
 
-
 #noticias
 {
-	background: white;	
-	float: left;
-	margin:6px;		
+	background: white;
+	float: left;	
+	margin:6px;
 	width: 456px;
 }
 
 #noticias .banner
 {	
 	background: white;
-	position: relative;
-	width: 456px;
 	min-height: 456px;
 	overflow: hidden;
+	position: relative;
+	width: 456px;	
 }
 
 #noticias .banner .texto
-{
-	min-height: 144px;
+{	
 	padding: 0.5em 0.5em 0 0.5em;
+}
+
+#noticias #publicacion
+{
+	margin: 6px;
+	height: 456px;
+	overflow: hidden;	
 }
 
 #noticias #publicacion .noticia_item
@@ -224,27 +252,99 @@ nav ul li a
 #principal
 {	
 	border: 1px solid blue;	
+	margin: 1em 3em;
 	overflow: hidden;
 	position: relative;
-	margin: 1em 3em;
 }
 
 #acerca_de
 {	
 	display: block;
-	text-align: left;
 	font-size: 0.7em;
-	padding-left: 0.5em;
 	font-weight: bold;	
+	padding-left: 0.5em;
+	text-align: left;
 }
-
-@media screen and (max-width: 320px) {
+/*
+@media only screen and (max-width: 1419px) and (min-width: 1260px){
 	body
-	{		
-		font-size: 16px;
+	{
+		font-size: 13.5px;
 	}
-}
 
-@media screen and (max-width: 320px) {
+	#contenedor
+	{
+		width: 1260px;
+		margin: 0 auto;
+		display: block;	
+		padding: 1em 0 0 0;		
+		overflow: hidden;
+		position: relative;
+	}
+	#contenido .contenido_item
+	{	
+		background: white;
+		float: left;
+		margin:6px;
+		position: relative;
+		width: 408px;
+		height: 408px;
+		overflow: hidden;
+	}
+	nav ul li
+	{
+		background: #80C408;			
+		border:0;
+		display: inline-block;
+		float: left;
+		height: 128px;
+		margin: 6px;
+		padding: 0px;	
+		width: 128px;	
+	}
 
-}
+	#noticias
+	{
+		background: white;	
+		float: left;
+		margin:6px;		
+		width: 408px;
+	}
+
+	#noticias
+	{
+		background: white;	
+		float: left;
+		margin:6px;		
+		width: 408px;
+	}
+
+	#noticias .banner
+	{	
+		background: white;
+		position: relative;
+		width: 408px;
+		min-height: 408px;
+		overflow: hidden;
+	}
+
+	header
+	{	
+		float: left;	
+		position: relative;
+		margin: 6px;
+		width: 408px;
+		height: 144px;
+		text-align: center;		
+	}
+
+	header #logo, #banner
+	{
+		margin: 0px;
+	}
+
+	header #logo img
+	{
+		width: 70%;
+	}
+}*/
